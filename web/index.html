@@ -1,0 +1,10 @@
+<!doctype html>
+
+<script>
+  (async () => {
+    const source = fetch('./index.wasm');
+    const {instance, module} = await WebAssembly.instantiateStreaming(source);
+
+    console.log(instance, module);
+  })();
+</script>
