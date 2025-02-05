@@ -1,10 +1,11 @@
 <!doctype html>
+<link href="data:image/x-icon;base64" rel="icon" type="image/x-icon" />
 
 <script>
   (async () => {
     const source = fetch('./index.wasm');
     const {instance, module} = await WebAssembly.instantiateStreaming(source);
 
-    console.log(instance, module);
+    console.log(instance);
   })();
 </script>
